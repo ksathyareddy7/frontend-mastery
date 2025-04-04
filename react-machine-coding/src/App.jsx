@@ -1,9 +1,10 @@
 import "./App.css";
+import { ToastNotificationAppContainer } from "./problems/ToastNotification/ToastNotificationAppContainer";
 
 function App() {
   return (
     <>
-      <p>Hello world</p>
+      <ToastNotificationAppContainer />
     </>
   );
 }

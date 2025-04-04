@@ -1,0 +1,61 @@
+.buttons-container {
+  display: flex;
+  padding: 20px;
+}
+.buttons-container button {
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.button-success {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.button-error {
+  border-color: #f44336;
+  color: #f44336;
+}
+.button-info {
+  border-color: #eea506;
+  color: #eea506;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.info {
+  background-color: #f7d063;
+}
+
+.toast button {
+  margin-left: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
