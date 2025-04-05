@@ -1,7 +1,10 @@
+/* buttons to trigger various types of notification */
+
 .buttons-container {
   display: flex;
   padding: 20px;
 }
+
 .buttons-container button {
   padding: 10px;
   border-radius: 4px;
@@ -11,18 +14,23 @@
   background-color: transparent;
   cursor: pointer;
 }
+
 .button-success {
   border-color: #4caf50;
   color: #4caf50;
 }
+
 .button-error {
   border-color: #f44336;
   color: #f44336;
 }
+
 .button-info {
   border-color: #eea506;
   color: #eea506;
 }
+
+/* toast container to display stack of notification */
 
 .toast-container {
   position: fixed;
@@ -49,7 +57,7 @@
 }
 
 .toast.info {
-  background-color: #f7d063;
+  background-color: #eea506;
 }
 
 .toast button {
@@ -58,4 +66,34 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* custom toast component */
+
+.custom-toast {
+  padding: 16px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.custom-toast p {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-success {
+  background-color: rgba(76, 175, 80, 0.2);
+  border-color: #4caf50;
+}
+
+.custom-error {
+  background-color: rgba(244, 67, 54, 0.2);
+  border-color: #f44336;
+}
+
+.custom-info {
+  background-color: rgba(238, 165, 6, 0.2);
+  border-color: #eea506;
 }

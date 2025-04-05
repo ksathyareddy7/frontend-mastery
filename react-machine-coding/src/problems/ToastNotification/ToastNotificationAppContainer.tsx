@@ -10,10 +10,11 @@ import { ToastNotificationProvider } from "./ToastNotificationContext";
 import { ToastContainer } from "./ToastContainer";
 import { ToastNotificationDemo } from "./ToastNotificationDemo";
 import "./ToastNotification.styles.css";
+import { CustomToast } from "./CustomToast";
 
 export const ToastNotificationAppContainer = () => {
   return (
-    <ToastNotificationProvider>
+    <ToastNotificationProvider customComponent={CustomToast}>
       <ToastContainer />
       <ToastNotificationDemo />
     </ToastNotificationProvider>

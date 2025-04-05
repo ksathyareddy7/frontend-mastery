@@ -13,7 +13,7 @@ export enum NotificationTypes {
 }
 
 // notification object
-interface Notification {
+export interface Notification {
   id: string;
   message: string;
   type: NotificationTypes;
@@ -24,6 +24,7 @@ interface NotificationContextProps {
   notificationsList: Notification[];
   addNotification: (notification: Notification) => void;
   removeNotification: (id: string) => void;
+  CustomComponent?: React.ElementType;
 }
 
 const NotificationContext = createContext<NotificationContextProps | undefined>(
@@ -42,10 +43,12 @@ export const useNotification = (): NotificationContextProps => {
 
 interface ToastNotificationProviderProps {
   children: ReactNode;
+  customComponent?: React.ElementType;
 }
 
 export const ToastNotificationProvider = ({
   children,
+  customComponent: CustomComponent,
 }: ToastNotificationProviderProps) => {
   const [notificationsList, setNotificationsList] = useState<Notification[]>(
     []
@@ -79,7 +82,12 @@ export const ToastNotificationProvider = ({
 
   return (
     <NotificationContext.Provider
-      value={{ notificationsList, addNotification, removeNotification }}
+      value={{
+        notificationsList,
+        addNotification,
+        removeNotification,
+        CustomComponent,
+      }}
     >
       {children}
     </NotificationContext.Provider>
