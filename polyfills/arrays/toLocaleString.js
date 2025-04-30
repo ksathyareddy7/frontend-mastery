@@ -4,7 +4,6 @@ Array.prototype.myToLocaleString = function (locales, options) {
       "Array.prototype.myToLocaleString called on null or undefined"
     );
   }
-  // Default behavior if no locales or options are provided
   locales = locales || "en-US";
   options = options || {};
 
@@ -13,9 +12,8 @@ Array.prototype.myToLocaleString = function (locales, options) {
     if (item != null && typeof item.toLocaleString === "function") {
       return item.toLocaleString(locales, options);
     }
-    return String(item); // Fallback to string conversion if no toLocaleString method is available
+    return String(item);
   });
 
-  // Join the array elements with a comma, handling locale-specific separator
   return elements.join(",");
 };

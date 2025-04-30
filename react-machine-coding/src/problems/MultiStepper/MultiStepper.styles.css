@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app {
+  padding: 24px;
+}
+h2 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-count {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: grey;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.active {
+  background-color: rgb(15, 134, 219);
+}
+
+.done {
+  background-color: rgb(105, 209, 0);
+}
+
+.line {
+  position: absolute;
+  width: calc(100% - 80px);
+  margin: auto;
+  top: 20px;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: grey;
+}
+
+.progress {
+  height: 100%;
+  background-color: green;
+}
+
+.step-component {
+  margin-top: 40px;
+}
+
+.component {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.component p {
+  margin-bottom: 20px;
+}
+
+.component button {
+  padding: 4px 8px;
+}

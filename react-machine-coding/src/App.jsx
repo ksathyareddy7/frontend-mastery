@@ -1,11 +1,10 @@
-import "./App.css";
-import { ToastNotificationAppContainer } from "./problems/ToastNotification/ToastNotificationAppContainer";
+import { OtpModal } from "./problems/OtpModal/OtpModal";
 
 function App() {
   return (
-    <>
-      <ToastNotificationAppContainer />
-    </>
+    <div>
+      <OtpModal length={6} />
+    </div>
   );
 }
 

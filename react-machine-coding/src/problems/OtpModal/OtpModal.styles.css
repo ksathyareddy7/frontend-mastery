@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.card {
+  width: fit-content;
+  padding: 40px;
+  margin: auto;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+input {
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.filled {
+  border: 2px solid rgb(21, 139, 0);
+}
